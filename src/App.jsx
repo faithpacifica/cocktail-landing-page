@@ -14,12 +14,12 @@ function App() {
   return (
     <main >
       <Navbar />
-      {/* <Hero />
+      <Hero />
       <Cocktails />
       <About />
       <Art />
       <Menu />
-      <Contact/> */}
+      <Contact/>
     </main>
   );
 }
