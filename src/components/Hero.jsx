@@ -27,6 +27,18 @@ const Hero = () => {
       delay: 1
     }); 
 
+    // leaves animation 
+    gsap.timeline({ //based on scroll
+      scrollTrigger:{
+        trigger:'#hero',//when hits the top of the section
+        start:'top top',// 
+        end:'bottom top',//bottom of the homepage hits the top of the viewport
+        scrub: true, //animation relates to scroll progress
+      }
+    })
+
+      .to(".right-leaf", { y: 200 }, 0)
+      .to(".left-leaf", { y: -200 }, 0)
     },[]);
 
   return (
