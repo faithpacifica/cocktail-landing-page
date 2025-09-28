@@ -11,7 +11,7 @@ const About = () => {
     const scrollTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#about",
-        start: "top center",
+        start: "top center", //top of the about section reaches the center of the screen
       },
     });
 
@@ -27,11 +27,11 @@ const About = () => {
         ".top-grid div, .bottom-grid div",
         {
           opacity: 0,
-          duration: 1,
+          duration: 2,
           ease: "power1.inOut",
           stagger: 0.04,
         },
-        "-=0.5"
+        "-=0.5" //it makes animatios start half second earlier for the previous end
       );
   });
 
