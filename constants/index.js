@@ -92,8 +92,8 @@ const storeInfo = {
   heading: "Where to Find Us",
   address: "456, Moon Blvd. #200, Los Angeles, CA 99210",
   contact: {
-    phone: "(555) 988-6565",
-    email: "harmonyvelvet@jsmcocktail.com",
+    phone: "(555) 900-6565",
+    email: "harmonyviolet@cocktail.com",
   },
 };
 
