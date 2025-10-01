@@ -133,7 +133,7 @@ const allCocktails = [
   },
   {
     id: 2,
-    name: "Raspberry Mojito",
+    name: "Rasberry Mojito",
     image: "/images/drink2.png",
     title: "A Fruity Twist on a Favorite",
     description:
