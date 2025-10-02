@@ -39,7 +39,7 @@ const Menu = () => {
         ease: "power1.inOut",
       }
     );
-  }, [currentIndex]);
+  }, [currentIndex]); //when this variable changes it reloads
 
   const totalCocktails = allCocktails.length;
 

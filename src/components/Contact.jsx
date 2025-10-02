@@ -54,6 +54,12 @@ const Contact = () => {
         alt="leaf-left"
         id="f-left-leaf"
       />
+      <img
+        src="/images/footer-drinks.png"
+        alt="footer drinks"
+        id="footer-drinks"
+        className="absolute bottom-10 right-10 md:block hidden "
+      />
 
       <div className="content">
         <h2>Where to Find Us</h2>
