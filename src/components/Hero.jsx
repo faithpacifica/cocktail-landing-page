@@ -55,6 +55,7 @@ const Hero = () => {
         start: startValue,
         end: endValue,
         scrub: true,
+        anticipatePin: 1,
         pin: true, //pins the video in place while scrolling
       },
     });
