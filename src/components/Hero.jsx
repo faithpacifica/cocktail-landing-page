@@ -2,11 +2,11 @@ import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
 import { useRef } from "react";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
   const videoRef = useRef();
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  // const isMobile = useMediaQuery({ maxWidth: 767 });
 
   useGSAP(() => {
     const heroSplit = new SplitText(".title", { type: "chars, words" });
@@ -47,31 +47,31 @@ const Hero = () => {
       .to(".left-leaf", { y: -200 }, 0);
 
     //video animation
-    const startValue = isMobile ? "top 50%" : "center 60%"; //top of the video hits  50% of the viewport the animation starts
-    const endValue = isMobile ? "120% top" : "bottom top";
+    // const startValue = isMobile ? "top 50%" : "center 60%"; //top of the video hits  50% of the viewport the animation starts
+    // const endValue = isMobile ? "120% top" : "bottom top";
 
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "video",
-        start: startValue,
-        end: endValue,
-        scrub: true,
-        anticipatePin: 1,
-        pin: true, //pins the video in place while scrolling
-      },
-    });
+    // let tl = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: "video",
+    //     start: startValue,
+    //     end: endValue,
+    //     scrub: true,
+    //     anticipatePin: 1,
+    //     pin: true, //pins the video in place while scrolling
+    //   },
+    // });
 
-    if (videoRef.current.readyState >= 1) {
-      tl.to(videoRef.current, {
-        currentTime: videoRef.current.duration,
-      });
-    } else {
-      videoRef.current.onloadedmetadata = () => {
-        tl.to(videoRef.current, {
-          currentTime: videoRef.current.duration,
-        });
-      };
-    }
+    // if (videoRef.current.readyState >= 1) {
+    //   tl.to(videoRef.current, {
+    //     currentTime: videoRef.current.duration,
+    //   });
+    // } else {
+    //   videoRef.current.onloadedmetadata = () => {
+    //     tl.to(videoRef.current, {
+    //       currentTime: videoRef.current.duration,
+    //     });
+    //   };
+    // }
   }, []);
 
   return (
@@ -117,12 +117,13 @@ const Hero = () => {
       <div className="video absolute inset-0">
         <video
           ref={videoRef}
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          src="/videos/output.mp4"
           muted
           playsInline
           autoplay
           preload="auto"
           controls
+          style={{ width: "100%", height: "100vh", objectFit: "cover" }}
         />
       </div>
     </>
