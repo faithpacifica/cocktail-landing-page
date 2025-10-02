@@ -52,7 +52,7 @@ const Hero = () => {
 
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "video",
+        trigger: ".video",
         start: startValue,
         end: endValue,
         scrub: true,
