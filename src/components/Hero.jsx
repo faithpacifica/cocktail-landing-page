@@ -36,6 +36,7 @@ const Hero = () => {
         //based on scroll
         scrollTrigger: {
           trigger: "#hero", //when hits the top of the section
+          anticipatePin: 1,
           start: "top top", // top of the homepage hits the top of the screen
           end: "bottom top", //bottom of the homepage hits the top of the viewport
           scrub: true, //animation relates to scroll progress
@@ -60,11 +61,17 @@ const Hero = () => {
       },
     });
 
-    videoRef.current.onloadedmetadata = () => {
+    if (videoRef.current.readyState >= 1) {
       tl.to(videoRef.current, {
         currentTime: videoRef.current.duration,
       });
-    };
+    } else {
+      videoRef.current.onloadedmetadata = () => {
+        tl.to(videoRef.current, {
+          currentTime: videoRef.current.duration,
+        });
+      };
+    }
   }, []);
 
   return (
@@ -113,7 +120,9 @@ const Hero = () => {
           src="/videos/output.mp4"
           muted
           playsInline
+          autoplay
           preload="auto"
+          
         />
       </div>
     </>
