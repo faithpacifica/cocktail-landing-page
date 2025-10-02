@@ -117,12 +117,12 @@ const Hero = () => {
       <div className="video absolute inset-0">
         <video
           ref={videoRef}
-          src="/videos/output.mp4"
+          src="https://www.w3schools.com/html/mov_bbb.mp4"
           muted
           playsInline
           autoplay
           preload="auto"
-          
+          controls
         />
       </div>
     </>
